@@ -6,6 +6,7 @@ Created on Tue Oct 13 03:47:29 2020
 @author: sathya
 """
 
+##Imports
 import pandas as pd
 import numpy as np
 from sklearn import model_selection
@@ -13,6 +14,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+##Constants
 VOCAB_SIZE = 100000
 EMBEDDING_DIM = 16
 MAX_LENGTH = 200
@@ -21,7 +23,7 @@ PADDING_TYPE='post'
 OOV_TOK = "<OOV>" #Out Of Vocabulary Handling
 TRAIN_SIZE = 15542
 
-
+##Data Loading and Preprocessing
 Train = pd.read_csv("train.csv")
 
 Train = Train.dropna()
